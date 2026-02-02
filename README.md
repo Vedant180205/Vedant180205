@@ -1,3 +1,4 @@
+![Banner](https://i.pinimg.com/1200x/19/75/1d/19751d804d0bf3793cd2faad8443ecb8.jpg)
 
 ```text
                    ██╗   ██╗███████╗██████╗  █████╗ ███╗   ██╗████████╗   ██████╗  █████╗ ████████╗██╗██╗
@@ -8,6 +9,7 @@
                      ╚═══╝  ╚══════╝╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═══╝   ╚═╝      ╚═╝     ╚═╝  ╚═╝   ╚═╝   ╚═╝╚══════╝
  ```
 <div align="center">
+  
 # 💫 About Me
 
 | Category | Summary |
@@ -19,11 +21,11 @@
 | 📈 Interests | Quant finance, applied ML, systems & low-level thinking |
 | 🎯 Goal | Internships & research-driven roles with real technical depth |
 
-## 🧩 Engineering Principles
+# 🧩 Engineering Principles
 Correctness before optimization | Explicit assumptions | Simple, explainable systems  
 
 
-## 🌐 Socials:
+# 🌐 Socials:
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/vedantonmic)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vedant-patil-933190330/)
 [![Email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:vedbhumi123@gmail.com)
