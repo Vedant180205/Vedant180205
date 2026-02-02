@@ -9,8 +9,21 @@
  ```
  
 
-# 💫 About Me:
-🛠️ ECS engineering student who builds systems end-to-end, not just demos<br><br>🤖 Work spans Machine Learning, Quant models, IoT, and core C/Java logic<br><br>🧠 Prefer reasoning, constraints, and correctness over copy-paste solutions<br><br>🔗 Built projects from Arduino hardware → ML pipelines → backend logic<br><br>📈 Actively exploring quantitative finance, applied ML, and low-level thinking<br><br>🔍 Learn by implementing first, validating assumptions, then optimizing<br><br>🚀 Looking for internships & research-driven roles where depth matters
+# 💫 About Me
+
+| Category | Summary |
+|---------|---------|
+| 🛠️ Background | ECS engineering student building **end-to-end systems**, not demos |
+| 🤖 Domains | Machine Learning, Quant models, IoT, Core C / Java |
+| 🧠 Approach | Constraint-driven reasoning and correctness over copy-paste |
+| 🔗 Experience | Arduino hardware → ML pipelines → backend logic |
+| 📈 Interests | Quant finance, applied ML, systems & low-level thinking |
+| 🎯 Goal | Internships & research-driven roles with real technical depth |
+
+## 🧩 Engineering Principles
+- Correctness before optimization  
+- Explicit assumptions  
+- Simple, explainable systems  
 
 
 ## 🌐 Socials:
