@@ -22,7 +22,7 @@
 | 🎯 Goal | Internships & research-driven roles with real technical depth |
 
 # 🧩 Engineering Principles
-Correctness before optimization | Explicit assumptions | Simple, explainable systems  
+Correctness before optimization  |  Explicit assumptions  |  Simple, explainable systems  
 
 
 # 🌐 Socials:
