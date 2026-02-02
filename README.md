@@ -9,152 +9,30 @@
  ```
  
 
+# 💫 About Me:
+🛠️ ECS engineering student who builds systems end-to-end, not just demos<br><br>🤖 Work spans Machine Learning, Quant models, IoT, and core C/Java logic<br><br>🧠 Prefer reasoning, constraints, and correctness over copy-paste solutions<br><br>🔗 Built projects from Arduino hardware → ML pipelines → backend logic<br><br>📈 Actively exploring quantitative finance, applied ML, and low-level thinking<br><br>🔍 Learn by implementing first, validating assumptions, then optimizing<br><br>🚀 Looking for internships & research-driven roles where depth matters
 
-<div align="center">
-<h3>
-Electronics × Computer Science<br>
-ML • Systems • Applied Engineering
-</h3>
 
-<p>
-  <a href="https://www.linkedin.com/in/vedant-patil-933190330/">
-    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white">
-  </a>
-  <a href="https://vedant-patil.vercel.app/">
-    <img src="https://img.shields.io/badge/Portfolio-000000?style=flat&logo=vercel&logoColor=white">
-  </a>
-  <a href="https://www.instagram.com/vedantonmic/?hl=en">
-    <img src="https://img.shields.io/badge/Instagram-E4405F?style=flat&logo=instagram&logoColor=white">
-  </a>
-</p>
+## 🌐 Socials:
+[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/vedantonmic)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/vedant-patil)
+[![Email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:vedbhumi123@gmail.com)
 
-</div>
 
----
+# 💻 Tech Stack:
+![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white) ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![Dart](https://img.shields.io/badge/dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase) ![Google Cloud](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white) ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white) ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white) ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white) ![Firebase](https://img.shields.io/badge/firebase-a08021?style=for-the-badge&logo=firebase&logoColor=ffcd34) ![Canva](https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white) ![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black) ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white) ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white) ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white) ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white) ![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white) ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) ![Arduino](https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white) ![Power Bi](https://img.shields.io/badge/power_bi-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
+# 📊 GitHub Stats:
+![](https://github-readme-stats.vercel.app/api?username=Vedant180205&theme=shadow_blue&hide_border=false&include_all_commits=true&count_private=true)<br/>
+![](https://nirzak-streak-stats.vercel.app/?user=Vedant180205&theme=shadow_blue&hide_border=false)<br/>
+![](https://github-readme-stats.vercel.app/api/top-langs/?username=Vedant180205&theme=shadow_blue&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
 
-## 🧠 ENGINEERING IDENTITY
+## 🏆 GitHub Trophies
+![](https://github-profile-trophy.vercel.app/?username=Vedant180205&theme=radical&no-frame=false&no-bg=true&margin-w=4)
 
-<table>
-<tr>
-<td width="70%">
-
-> I build systems where **code meets reality**.  
-> I optimize for **correctness, traceability, and survivability** — not trends.
-
-</td>
-<td width="30%" align="center">
-
-**SYSTEM MODE**
-
-</td>
-</tr>
-</table>
+### ✍️ Random Dev Quote
+![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
 
 ---
+[![](https://visitcount.itsvg.in/api?id=Vedant180205&icon=0&color=0)](https://visitcount.itsvg.in)
 
-## 🧩 OPERATIONAL CAPABILITIES
-
-<table>
-<tr>
-<td width="50%" valign="top">
-
-### 🔧 What I Actually Do
-- Design **ML models** with real evaluation discipline  
-- Build **embedded + IoT systems** that interact with the physical world  
-- Convert **vague problem statements → working systems**  
-- Own projects **end-to-end**, including failure analysis  
-
-</td>
-<td width="50%" valign="top">
-
-### ⚠️ I Perform Best When
-- Constraints are unclear  
-- Hardware & software trade-offs exist  
-- Debugging matters more than tutorials  
-- Systems fail before they work  
-
-</td>
-</tr>
-</table>
-
----
-
-## 🗂 DOMAIN STACK (DEPTH-FOCUSED)
-
-| Domain | What I Focus On |
-|------|----------------|
-| 🧠 Machine Learning | Prediction, classification, evaluation |
-| ⚙️ Embedded Systems | Arduino, sensors, real-world interfacing |
-| 🧮 Backend / Logic | Data flow, state handling, validation |
-| 🧪 Problem Solving | Correctness-first (DSA over hacks) |
-
----
-
-## ⚙️ TOOLCHAIN SNAPSHOT
-
-<table>
-<tr>
-<td width="50%" valign="top">
-
-### Languages (Reasoning Priority)
-Python ████████████████ 90%
-C / C++ ██████████████ 80%
-JS ██████████ 60%
-
-
-</td>
-<td width="50%" valign="top">
-
-### Systems & Workflow
-- ML/Data → NumPy, Pandas, Scikit-Learn  
-- Embedded → Arduino, sensors, serial protocols  
-- Tooling → Git, GitHub, Linux, VS Code  
-
-</td>
-</tr>
-</table>
-
----
-
-## 📊 SYSTEM TELEMETRY
-
-<div align="center">
-
-<img src="https://github-readme-stats.vercel.app/api?username=VedantPatil&show_icons=true&theme=tokyonight&hide_border=true" height="165"/>
-
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=VedantPatil&theme=tokyonight&hide_border=true" height="165"/>
-
-</div>
-
-<div align="center">
-
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=VedantPatil&layout=compact&theme=tokyonight&hide_border=true"/>
-
-</div>
-
----
-
-## 📐 ENGINEERING PHILOSOPHY (HARD RULES)
-
-I evaluate my own work using three questions:
-
-1. **Authenticity** — Does it solve the *actual* problem, not a simplified one?
-2. **Traceability** — Can I explain every decision in the system?
-3. **Survivability** — Would this survive real-world constraints?
-
->If any answer is **no**, I rebuild.
-
----
-
-## 🎯 DIRECTION OF GROWTH
-
-- Systems-level ML (not notebook demos)
-- Embedded + ML intersections
-- Problems with incomplete constraints
-- Projects that **break before they succeed**
-
----
-
-<div align="center">
-<sub>Last updated: February 2026</sub>
-</div>
+<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
