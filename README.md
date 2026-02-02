@@ -1,4 +1,4 @@
-![Banner](https://i.pinimg.com/1200x/19/75/1d/19751d804d0bf3793cd2faad8443ecb8.jpg)
+![Banner](https://i.pinimg.com/1200x/47/c9/43/47c943be618f2139dbd52eda860fadeb.jpg)
 
 ```text
                    ██╗   ██╗███████╗██████╗  █████╗ ███╗   ██╗████████╗   ██████╗  █████╗ ████████╗██╗██╗
