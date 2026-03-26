@@ -67,44 +67,6 @@
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
-<div align="center">
-
-## 〔 ⚙️ My Blueprint 〕
-
-<table>
-<tr>
-<td width="50%" valign="top">
-
-### 🧠 What I Do
-```
-🔬  Machine Learning & AI
-📈  Quantitative Finance Models
-🔧  Embedded Systems & Arduino
-🌐  Full-Stack Web Development
-🗃️  DSA-driven Backend Systems
-🤖  Robot Simulation (MATLAB)
-```
-
-</td>
-<td width="50%" valign="top">
-
-### ⚡ How I Think
-```
-→  Constraint-driven reasoning
-→  Architecture first, syntax later
-→  Own the full vertical stack
-→  No demo culture — ship real stuff
-→  Correctness > cleverness
-→  11pm sessions hit different ☕
-```
-
-</td>
-</tr>
-</table>
-
-</div>
-
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
 <div align="center">
 
