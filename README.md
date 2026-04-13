@@ -71,14 +71,12 @@
 <div align="center">
 
 ## 〔 🚀 Signature Projects 〕
-
 <table>
 <tr>
 <td width="50%" valign="top">
 
 ### ⚡ [Options Pricing Model](https://github.com/Vedant180205/OptionsPricingModel_QuantDevs)
 > **Python · Black-Scholes · Greeks**
-
 Real quant finance math. Not a tutorial follow-along — actual options pricing engine with Greeks computation. Built for a hackathon, built to be correct.
 
 ![Python](https://img.shields.io/badge/Python-3670A0?style=flat-square&logo=python&logoColor=ffdd54)
@@ -87,13 +85,12 @@ Real quant finance math. Not a tutorial follow-along — actual options pricing 
 </td>
 <td width="50%" valign="top">
 
-### 🏠 [House Price Prediction](https://github.com/Vedant180205/House-price-prediction-model)
-> **Random Forest · Scikit-learn · Jupyter**
+### 🎓 [CyberDevs AMUHACKS 5.0](https://github.com/Vedant180205/CyberDevs_AMUHACKS5.0)
+> **TypeScript · Full-Stack · Hackathon**
+Academic bridge system built under pressure at AMUHACKS. Real constraints, real deadline, shipped.
 
-End-to-end ML regression pipeline — data cleaning, feature engineering, model tuning. Real-world dataset, production-quality thinking.
-
-![Python](https://img.shields.io/badge/Python-3670A0?style=flat-square&logo=python&logoColor=ffdd54)
-![ML](https://img.shields.io/badge/Machine_Learning-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white)
+![Hackathon](https://img.shields.io/badge/🏆_Hackathon-blueviolet?style=flat-square)
 
 </td>
 </tr>
@@ -102,7 +99,6 @@ End-to-end ML regression pipeline — data cleaning, feature engineering, model 
 
 ### 🩺 [Doctor Booking System](https://github.com/Vedant180205/Doctor-appointment-booking-system)
 > **Java · MySQL · DSA**
-
 Not CRUD — actual DSA. `HashMap` + `PriorityQueue` for O(log n) appointment scheduling. Real-time data handling. Architecture matters.
 
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
@@ -111,23 +107,21 @@ Not CRUD — actual DSA. `HashMap` + `PriorityQueue` for O(log n) appointment sc
 </td>
 <td width="50%" valign="top">
 
-### 🤖 [Puma 560 Robot Sim](https://github.com/Vedant180205/Pick-and-place-simulation-using-matlab)
-> **MATLAB · Robotics · Trajectory Planning**
+### 🤖 [Personal Assistant — Jarvis](https://github.com/Vedant180205/Personal_assistant)
+> **Python · Ollama · Whisper · Playwright**
+Fully offline, privacy-first voice AI for Windows. Wake word detection, local LLM tool-calling, sandboxed PowerShell execution, and browser automation. No cloud. No compromise.
 
-Joint-space trajectory planning for an industrial Puma 560 arm. Smooth pick-and-place motion. This one lives rent-free in my head.
-
-![MATLAB](https://img.shields.io/badge/MATLAB-0076A8?style=flat-square&logo=mathworks&logoColor=white)
-![Robotics](https://img.shields.io/badge/Robotics-00979D?style=flat-square&logo=arduino&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3670A0?style=flat-square&logo=python&logoColor=ffdd54)
+![AI](https://img.shields.io/badge/Local_AI-00599C?style=flat-square)
 
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
 
-### 💊 [VitalTracker](https://github.com/Vedant180205/VitalTracker)
-> **HTML · JS · IoT · Healthcare**
-
-Healthcare hackathon project. Vital signs tracking with real-time UI. Built fast, built functional.
+### 🧍 [StandEase Web](https://github.com/Vedant180205/StandEase-Web)
+> **Web · Health Tech · Posture**
+Web platform for posture and ergonomics support. Built to make good habits accessible and trackable.
 
 ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=flat-square&logo=javascript&logoColor=F7DF1E)
@@ -135,13 +129,12 @@ Healthcare hackathon project. Vital signs tracking with real-time UI. Built fast
 </td>
 <td width="50%" valign="top">
 
-### 🎓 [CyberDevs AMUHACKS 5.0](https://github.com/Vedant180205/CyberDevs_AMUHACKS5.0)
-> **TypeScript · Full-Stack · Hackathon**
+### 💊 [VitalTracker](https://github.com/Vedant180205/VitalTracker)
+> **HTML · JS · IoT · Healthcare**
+Healthcare hackathon project. Vital signs tracking with real-time UI. Built fast, built functional.
 
-Academic bridge system built under pressure at AMUHACKS. Real constraints, real deadline, shipped.
-
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white)
-![Hackathon](https://img.shields.io/badge/🏆_Hackathon-blueviolet?style=flat-square)
+![HTML](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=flat-square&logo=javascript&logoColor=F7DF1E)
 
 </td>
 </tr>
@@ -203,22 +196,10 @@ Academic bridge system built under pressure at AMUHACKS. Real constraints, real 
 
 ## 〔 📊 GitHub Stats 〕
 
-<img width="49%" src="https://github-readme-stats.vercel.app/api?username=Vedant180205&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&show_icons=true" />
-<img width="49%" src="https://nirzak-streak-stats.vercel.app/?user=Vedant180205&theme=tokyonight&hide_border=true" />
-
-<br/>
-
-<img width="40%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Vedant180205&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&layout=compact" />
-
-</div>
-
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
-
 <div align="center">
-
-## 〔 🏆 Trophies 〕
-
-![](https://github-profile-trophy.vercel.app/?username=Vedant180205&theme=tokyonight&no-frame=true&no-bg=true&margin-w=6&column=7)
+  <img width="49%" src="https://streak-stats.demolab.com?user=Vedant180205&theme=tokyonight&hide_border=true" />
+  
+</div>
 
 </div>
 
