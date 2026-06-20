@@ -1,13 +1,5 @@
 ![Banner](https://i.pinimg.com/1200x/47/c9/43/47c943be618f2139dbd52eda860fadeb.jpg)
 
-```text
-                   ██╗   ██╗███████╗██████╗  █████╗ ███╗   ██╗████████╗   ██████╗  █████╗ ████████╗██╗██╗
-                   ██║   ██║██╔════╝██╔══██╗██╔══██╗████╗  ██║╚══██╔══╝   ██╔══██╗██╔══██╗╚══██╔══╝██║██║
-                   ██║   ██║█████╗  ██║  ██║███████║██╔██╗ ██║   ██║      ██████╔╝███████║   ██║   ██║██║
-                   ╚██╗ ██╔╝██╔══╝  ██║  ██║██╔══██║██║╚██╗██║   ██║      ██╔═══╝ ██╔══██║   ██║   ██║██║
-                    ╚████╔╝ ███████╗██████╔╝██║  ██║██║ ╚████║   ██║      ██║     ██║  ██║   ██║   ██║███████╗
-                     ╚═══╝  ╚══════╝╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═══╝   ╚═╝      ╚═╝     ╚═╝  ╚═╝   ╚═╝   ╚═╝╚══════╝
- ```
 <div align="center">
 <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=24&duration=2500&pause=800&color=00D9FF&center=true&vCenter=true&width=750&lines=⚡+ECS+Engineer+%7C+Systems+Thinker;🤖+ML+%2B+Quant+Finance+%2B+IoT+Builder;🔗+Arduino+→+ML+Pipelines+→+Backend+Logic;⚖️+Correctness+Before+Optimization;🚀+End-to-End+Systems%2C+Not+Demos" alt="Typing SVG" />
 
@@ -29,49 +21,34 @@
 
 <div align="center">
 
-## 〔 💀 `whoami` 〕
+## whoami
 
 </div>
 
-<div align="center">
+**Vedant Patil** — B.Tech Electronics & Computer Science, Mumbai.
 
-```python
-╔══════════════════════════════════════════════════════════════════════════╗
-║                        class VedantPatil:                                ║
-╠══════════════════════════════════════════════════════════════════════════╣
-║                                                                          ║
-║   name        =  "Vedant Patil"                                          ║
-║   location    =  "Mumbai, India 🇮🇳"                                      ║
-║   degree      =  "B.Tech — Electronics & Computer Science (ECS)"         ║
-║   stack       =  ["C", "C++", "Java", "Python", "JS", "Dart"]            ║
-║   domains     =  ["ML/AI", "Quant Finance", "IoT", "DSA", "Web"]         ║
-║   superpower  =  "Arduino → ML pipelines → backend  (full ownership)"    ║
-║                                                                          ║
-╠══════════════════════════ currently() ═══════════════════════════════════╣
-║                                                                          ║
-║   🔨 building   →  Options Pricing Models, IoT systems, ML engines       ║
-║   📖 learning   →  Quant Finance, Low-level systems, Deep Learning       ║
-║   🎯 seeking    →  Internships in ML · Quant · Systems                   ║
-║   🦾 fun_fact   →  I simulate robot arms in MATLAB for fun               ║
-║                                                                          ║
-╠══════════════════════════ philosophy ════════════════════════════════════╣
-║                                                                          ║
-║   ⚖️  Correctness before optimization                                    ║
-║   📌  Explicit assumptions, always                                       ║
-║   🔬  Simple, explainable systems over clever hacks                      ║
-║                                                                          ║
-╚══════════════════════════════════════════════════════════════════════════╝
-```
+I build things end-to-end. Not demos — systems. From Arduino sensor pipelines to ML inference engines to web backends, I own the full stack from hardware to deployment.
 
-</div>
+Currently exploring the overlap between **ML**, **quant finance**, and **IoT** — where correctness matters more than cleverness.
+
+| | |
+|---|---|
+| **Degree** | B.Tech — Electronics & Computer Science (ECS) |
+| **Location** | Mumbai, India 🇮🇳 |
+| **Languages** | C, C++, Java, Python, JavaScript, Dart |
+| **Domains** | ML/AI · Quant Finance · IoT · DSA · Web |
+| **Seeking** | Internships in ML · Quant · Systems |
+| **Fun fact** | I simulate robot arms in MATLAB. For fun. |
+
+> *Correctness before optimization. Explicit assumptions, always.*
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
 <div align="center">
 
-## 〔 💻 Tech Arsenal 〕
+## Tech Arsenal
 
-### ⌨️ Languages
+### Languages
 <table>
   <tr>
     <td align="center" width="110">
@@ -105,7 +82,7 @@
   </tr>
 </table>
 
-### 🤖 ML / AI / Data
+### ML / AI / Data
 <table>
   <tr>
     <td align="center" width="110">
@@ -139,13 +116,9 @@
   </tr>
 </table>
 
-### 📈 Quant & Analytics
+### Databases
 <table>
   <tr>
-    <td align="center" width="110">
-      <img src="https://skillicons.dev/icons?i=matlab" height="50" alt="MATLAB"/><br/>
-      <sub><b>MATLAB</b></sub>
-    </td>
     <td align="center" width="110">
       <img src="https://skillicons.dev/icons?i=mysql" height="50" alt="MySQL"/><br/>
       <sub><b>MySQL</b></sub>
@@ -158,10 +131,22 @@
       <img src="https://skillicons.dev/icons?i=postgres" height="50" alt="PostgreSQL"/><br/>
       <sub><b>PostgreSQL</b></sub>
     </td>
+    <td align="center" width="110">
+      <img src="https://skillicons.dev/icons?i=supabase" height="50" alt="Supabase"/><br/>
+      <sub><b>Supabase</b></sub>
+    </td>
+    <td align="center" width="110">
+      <img src="https://skillicons.dev/icons?i=mongodb" height="50" alt="MongoDB"/><br/>
+      <sub><b>MongoDB</b></sub>
+    </td>
+    <td align="center" width="110">
+      <img src="https://skillicons.dev/icons?i=firebase" height="50" alt="Firebase"/><br/>
+      <sub><b>Firebase</b></sub>
+    </td>
   </tr>
 </table>
 
-### 🌐 Web & Cloud
+### Web & Cloud
 <table>
   <tr>
     <td align="center" width="110">
@@ -177,16 +162,16 @@
       <sub><b>React</b></sub>
     </td>
     <td align="center" width="110">
+      <img src="https://skillicons.dev/icons?i=nextjs" height="50" alt="Next.js"/><br/>
+      <sub><b>Next.js</b></sub>
+    </td>
+    <td align="center" width="110">
       <img src="https://skillicons.dev/icons?i=nodejs" height="50" alt="Node.js"/><br/>
       <sub><b>Node.js</b></sub>
     </td>
     <td align="center" width="110">
-      <img src="https://skillicons.dev/icons?i=bootstrap" height="50" alt="Bootstrap"/><br/>
-      <sub><b>Bootstrap</b></sub>
-    </td>
-    <td align="center" width="110">
-      <img src="https://skillicons.dev/icons?i=firebase" height="50" alt="Firebase"/><br/>
-      <sub><b>Firebase</b></sub>
+      <img src="https://skillicons.dev/icons?i=fastapi" height="50" alt="FastAPI"/><br/>
+      <sub><b>FastAPI</b></sub>
     </td>
     <td align="center" width="110">
       <img src="https://skillicons.dev/icons?i=gcp" height="50" alt="Google Cloud"/><br/>
@@ -196,10 +181,14 @@
       <img src="https://skillicons.dev/icons?i=vercel" height="50" alt="Vercel"/><br/>
       <sub><b>Vercel</b></sub>
     </td>
+    <td align="center" width="110">
+      <img src="https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=000" height="30" alt="Render"/><br/>
+      <sub><b>Render</b></sub>
+    </td>
   </tr>
 </table>
 
-### 🔧 Embedded & Hardware
+### Embedded & Hardware
 <table>
   <tr>
     <td align="center" width="110">
@@ -207,13 +196,13 @@
       <sub><b>Arduino</b></sub>
     </td>
     <td align="center" width="110">
-      <img src="https://skillicons.dev/icons?i=raspberrypi" height="50" alt="Raspberry Pi"/><br/>
-      <sub><b>Raspberry Pi</b></sub>
+      <img src="https://img.shields.io/badge/ESP32-E7352C?style=for-the-badge&logo=espressif&logoColor=white" height="30" alt="ESP32"/><br/>
+      <sub><b>ESP32</b></sub>
     </td>
   </tr>
 </table>
 
-### 🛠️ Dev Tools
+### Dev Tools
 <table>
   <tr>
     <td align="center" width="110">
@@ -229,24 +218,12 @@
       <sub><b>VS Code</b></sub>
     </td>
     <td align="center" width="110">
-      <img src="https://skillicons.dev/icons?i=linux" height="50" alt="Linux"/><br/>
-      <sub><b>Linux</b></sub>
-    </td>
-    <td align="center" width="110">
-      <img src="https://skillicons.dev/icons?i=docker" height="50" alt="Docker"/><br/>
-      <sub><b>Docker</b></sub>
-    </td>
-    <td align="center" width="110">
-      <img src="https://skillicons.dev/icons?i=postman" height="50" alt="Postman"/><br/>
-      <sub><b>Postman</b></sub>
-    </td>
-    <td align="center" width="110">
       <img src="https://skillicons.dev/icons?i=powershell" height="50" alt="PowerShell"/><br/>
       <sub><b>PowerShell</b></sub>
     </td>
     <td align="center" width="110">
-      <img src="https://skillicons.dev/icons?i=canva" height="50" alt="Canva"/><br/>
-      <sub><b>Canva</b></sub>
+      <img src="https://antigravity.google/assets/image/brand/antigravity-icon__full-color.png" height="50" alt="Antigravity"/><br/>
+      <sub><b>antigravity</b></sub>
     </td>
   </tr>
 </table>
@@ -257,11 +234,10 @@
 
 <div align="center">
 
-## 〔 📊 GitHub Stats 〕
+## GitHub Stats
 
 <div align="center">
   <img width="49%" src="https://streak-stats.demolab.com?user=Vedant180205&theme=tokyonight&hide_border=true" />
-  
 </div>
 
 </div>
@@ -270,11 +246,11 @@
 
 <div align="center">
 
-## 〔 📡 Contribution Graph 〕
+## Contribution Graph
 
 ![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=Vedant180205&theme=tokyo-night&hide_border=true&area=true)
 
-## 〔 🐍 Watch My Contributions Get Eaten 〕
+## Watch My Contributions Get Eaten
 
 ![Snake animation](https://github.com/Platane/snk/raw/output/github-contribution-grid-snake-dark.svg)
 
@@ -284,7 +260,7 @@
 
 <div align="center">
 
-## 〔 ✍️ Words to Build By 〕
+## Words to Build By
 
 ![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight)
 
@@ -293,42 +269,6 @@
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
 <div align="center">
-
-<details>
-<summary><b>🔬 Click to enter the void — How I Actually Think</b></summary>
-
-<br/>
-
-### 🧠 The Mental Model
-
-> *"I don't build demos. I build systems."*
-
-Every project starts with a constraint analysis — **what breaks first? what's the bottleneck? what assumptions am I baking in silently?** Whether it's Black-Scholes options pricing or an Arduino sensor pipeline, the question is always the same:
-
-```
-Is this CORRECT before it's clever?
-```
-
-### 📐 Evidence
-
-| System | What made it hard | How I solved it |
-|--------|------------------|-----------------|
-| Options Pricing Engine | Real finance math, not toy formulas | Implemented Black-Scholes from scratch with Greeks |
-| Doctor Booking System | O(n) naive scheduling was unacceptable | PriorityQueue + HashMap → O(log n) scheduling |
-| Robot Arm Sim | Jerky motion = useless sim | Joint-space trajectory smoothing in MATLAB |
-| House Price ML | Overfitting on raw features | Feature engineering + ensemble (Random Forest) |
-
-### 🎲 Lore
-
-```
-🦾  Simulates robots in MATLAB for fun (yes, actually)
-♟️  Thinks in systems — architecture first, syntax second
-☕  Best code written between 11pm and 2am
-📡  Once forced an Arduino to do something it wasn't built for. It worked.
-🧩  DSA isn't just for interviews — it's in production code
-```
-
-</details>
 
 <br/>
 
