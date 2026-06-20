@@ -21,26 +21,36 @@
 
 <div align="center">
 
-## whoami
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=130&section=header&text=ABOUT.EXE&fontSize=44&fontColor=ffffff&animation=fadeIn&fontAlignY=65" />
+
+<sub><b>B.Tech Electronics & Computer Science — Mumbai</b> &nbsp;·&nbsp; <b>4× Hackathon Winner</b> &nbsp;·&nbsp; <b>ML × IoT × Quant</b></sub>
+
+
+
+<br>
+
+I build engineering systems that work across the full spectrum — **IoT, machine learning, backend, and data-driven applications.** Not demos. Systems. Things that actually run end-to-end.
+
+My work doesn't live in one layer. It spans hardware and software, sensor input and model output, raw data and production-ready endpoints. That's not accidental — that's how I think.
+
+Currently going deep on **data structures & algorithms**, **embedded systems**, and **low-level programming** — exploring system-oriented engineering at the intersection of ML, quant finance, and IoT. The domains where correctness isn't optional.
+
+<br>
+</div>
+<div align="center">
+
+**Seeking internships in** &nbsp; <kbd>ML</kbd> &nbsp; <kbd>Quant Finance</kbd> &nbsp; <kbd>Systems Engineering</kbd> &nbsp; <kbd>Web Development</kbd>
+
+<br>
+
+> *Correctness before optimization. Explicit assumptions, always.*
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=80&section=footer" />
 
 </div>
 
-**Vedant Patil** — B.Tech Electronics & Computer Science, Mumbai.
 
-I build things end-to-end. Not demos — systems. From Arduino sensor pipelines to ML inference engines to web backends, I own the full stack from hardware to deployment.
 
-Currently exploring the overlap between **ML**, **quant finance**, and **IoT** — where correctness matters more than cleverness.
-
-| | |
-|---|---|
-| **Degree** | B.Tech — Electronics & Computer Science (ECS) |
-| **Location** | Mumbai, India 🇮🇳 |
-| **Languages** | C, C++, Java, Python, JavaScript, Dart |
-| **Domains** | ML/AI · Quant Finance · IoT · DSA · Web |
-| **Seeking** | Internships in ML · Quant · Systems |
-| **Fun fact** | I simulate robot arms in MATLAB. For fun. |
-
-> *Correctness before optimization. Explicit assumptions, always.*
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
