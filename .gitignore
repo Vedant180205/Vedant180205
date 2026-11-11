@@ -1,0 +1,21 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Temporary files & screenshots
+*.png
+*.jpg
+*.jpeg
+temp/
+preview/
+.taste-skill/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,2 @@
+# Dependencies
+# No heavy dependencies needed; standard library handles JSON, HTTP, and SVG rendering.
