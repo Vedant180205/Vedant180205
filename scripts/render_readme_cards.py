@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Render the animated SVG cards used by README.md matching the Graphic Garden aesthetic.
+"""Render the animated SVG cards used by README.md.
 
 Reads data/contributions.json and writes:
-- hero.svg
+- hero.svg (Wide 1600x500 banner with monochrome portrait & technical geometry)
 - social.svg
 - graph.svg
 - months.svg
@@ -28,14 +28,9 @@ DATA = Path(os.environ.get("DATA", ROOT / "data" / "contributions.json"))
 OUT = Path(os.environ.get("OUT", ROOT / "cards"))
 STATIC = os.environ.get("STATIC") == "1"
 
-# ---- Palette Specification: Graphic Garden ---------------------------------
-# Primary Background: Charcoal #323232
-# Main Card Background: Warm Cream #FEE8D0
-# Primary Accent: Vibrant Orange #FC6F20
-# Secondary Orange: Soft Orange #FFAA70
-# Subtle Borders / Neutrals: Warm Neutral #D8C3AC
-BG_CHARCOAL = "#323232"
-CARD_CREAM  = "#FEE8D0"
+# ---- Palette Specification: Graphic Garden & Tech Navy --------------------
+BG_CHARCOAL   = "#323232"
+CARD_CREAM    = "#FEE8D0"
 ACCENT_ORANGE = "#FC6F20"
 SOFT_ORANGE   = "#FFAA70"
 BORDER_NEUTRAL= "#D8C3AC"
@@ -44,6 +39,12 @@ MUTED_DARK    = "#685E55"
 LIGHT_TEXT    = "#FEE8D0"
 MUTED_LIGHT   = "#B8AFA6"
 GRID_EMPTY    = "#424242"
+
+# Hero specific colors
+HERO_NAVY      = "#102B3F"
+HERO_OCEAN     = "#0875D1"
+HERO_PALE_BLUE = "#EAF6FE"
+HERO_WHITE     = "#FFFFFF"
 
 # Heatmap orange levels: empty + 4 intensities
 HEAT_LEVELS = [
@@ -57,7 +58,7 @@ HEAT_LEVELS = [
 def esc(s):
     return html.escape(str(s), quote=True)
 
-# ---- Font embedding (Manrope & JetBrains Mono) -------------------------------
+# ---- Font embedding (Anton, Bebas Neue, Manrope, JetBrains Mono) ------------
 def font_face(family, filename, weight=400):
     p = ROOT / "fonts" / filename
     if not p.exists():
@@ -70,6 +71,8 @@ def font_face(family, filename, weight=400):
     )
 
 FONTS = "".join([
+    font_face("Anton", "anton.woff2", 400),
+    font_face("BebasNeue", "bebasneue.woff2", 400),
     font_face("Manrope", "manrope.woff2", 400),
     font_face("Manrope", "manrope.woff2", 600),
     font_face("Manrope", "manrope.woff2", 700),
@@ -79,12 +82,14 @@ FONTS = "".join([
     font_face("JetBrainsMono", "jetbrainsmono.woff2", 700),
 ])
 
+FONT_DISPLAY = "'Anton', 'BebasNeue', Impact, -apple-system, sans-serif"
 FONT_SANS = "'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
 FONT_MONO = "'JetBrainsMono', monospace"
 
 BASE_CSS = f"""
 {FONTS}
 * {{ box-sizing: border-box; }}
+.title-font {{ font-family: {FONT_DISPLAY}; }}
 .sans {{ font-family: {FONT_SANS}; }}
 .mono {{ font-family: {FONT_MONO}; }}
 .fb {{ transform-box: fill-box; }}
@@ -96,6 +101,10 @@ BASE_CSS = f"""
 @keyframes pop {{ 0% {{ opacity: 0; transform: scale(.4); }} 70% {{ opacity: 1; transform: scale(1.1); }} 100% {{ opacity: 1; transform: scale(1); }} }}
 @keyframes nudge {{ 0%, 100% {{ transform: translate(0,0); }} 50% {{ transform: translate(3px, -3px); }} }}
 @keyframes sweep {{ 0%, 70% {{ transform: translateX(-120%) skewX(-15deg); }} 100% {{ transform: translateX(360%) skewX(-15deg); }} }}
+
+/* Hero specific animations */
+@keyframes heroDiag {{ from {{ opacity: 0; transform: translateX(50px); }} to {{ opacity: 1; transform: none; }} }}
+@keyframes heroPortrait {{ from {{ opacity: 0; transform: translateY(30px); }} to {{ opacity: 1; transform: none; }} }}
 
 @media (prefers-reduced-motion: reduce) {{
   *, *::before, *::after {{ animation: none !important; }}
@@ -187,66 +196,89 @@ def months_series():
             sums[(d.year, d.month)] += c
     return [(calendar.month_abbr[m], sums[(y, m)]) for y, m in ym]
 
-# ---- 1. HERO CARD -----------------------------------------------------------
+# ---- 1. HERO CARD (Wide 1600 x 500) ----------------------------------------
 def hero():
-    W, H = 1000, 360
+    W, H = 1600, 500
+    
+    # Check portrait image
+    portrait_path = ROOT / "cards" / "portrait.png"
+    portrait_b64 = ""
+    if portrait_path.exists():
+        portrait_b64 = base64.b64encode(portrait_path.read_bytes()).decode("ascii")
+
+    # Procedural technical wireframe terrain on right
+    wave_paths = []
+    for i in range(12):
+        y_offset = 120 + i * 26
+        d = f"M 1150 {y_offset + 100} Q 1280 {y_offset - 60} 1420 {y_offset + 40} T 1620 {y_offset - 20}"
+        opacity = 0.08 + (i / 12.0) * 0.18
+        wave_paths.append(f'<path d="{d}" fill="none" stroke="#2585D8" stroke-width="1.2" stroke-opacity="{opacity:.2f}"/>')
+
+    for j in range(14):
+        x_offset = 1180 + j * 32
+        d = f"M {x_offset} 200 Q {x_offset + 30} 320 {x_offset + 70} 500"
+        opacity = 0.06 + (j / 14.0) * 0.14
+        wave_paths.append(f'<path d="{d}" fill="none" stroke="#1D6FA8" stroke-width="1.0" stroke-opacity="{opacity:.2f}"/>')
+
+    wireframe_svg = "".join(wave_paths)
+
     defs = f'''
-    <clipPath id="hero-clip">
-      <rect x="0" y="0" width="{W}" height="{H}" rx="24"/>
+    <clipPath id="inner-banner-clip">
+      <rect x="25" y="22" width="1550" height="456" rx="4"/>
+    </clipPath>
+    <clipPath id="portrait-clip">
+      <rect x="950" y="0" width="650" height="500"/>
     </clipPath>
     '''
-    b = [f'<rect width="{W}" height="{H}" rx="24" fill="{CARD_CREAM}"/>']
-    
-    # Overlapping geometric circles/shapes on the right
-    shapes = f'''
-    <g clip-path="url(#hero-clip)">
-      <circle cx="950" cy="80" r="230" fill="{ACCENT_ORANGE}"/>
-      <circle cx="830" cy="180" r="190" fill="{SOFT_ORANGE}" fill-opacity="0.85"/>
-      <circle cx="980" cy="280" r="200" fill="{CARD_CREAM}" fill-opacity="0.35"/>
-    </g>
-    '''
-    b.append(shapes)
-    
-    # Top metadata with orange dot
-    b.append(
-        f'<g {A("fade", 0.5, 0.1)}>'
-        f'<circle cx="62" cy="54" r="5" fill="{ACCENT_ORANGE}"/>'
-        f'<text x="78" y="58" class="sans" font-size="15" font-weight="600" fill="{DARK_TEXT}">'
-        f'B.Tech Electronics &amp; Computer Science &#160;·&#160; Mumbai</text>'
+
+    b = [
+        # Outer Canvas: Deep Navy #102B3F
+        f'<rect width="{W}" height="{H}" fill="{HERO_NAVY}"/>',
+        
+        # Inner banner container
+        f'<g clip-path="url(#inner-banner-clip)">',
+        f'  <rect x="25" y="22" width="1550" height="456" fill="{HERO_PALE_BLUE}" {A("fade", 0.7, 0.0)}/>',
+        f'  <polygon points="1260,22 1575,22 1575,478 1020,478" fill="{HERO_NAVY}" {A("fade", 0.7, 0.1)}/>',
+        f'  <polygon points="1225,22 1360,22 1080,478 945,478" fill="{HERO_OCEAN}" {A("heroDiag", 0.9, 0.2)}/>',
+        f'  <g {A("fade", 1.2, 1.2)}>{wireframe_svg}</g>',
+        f'</g>',
+        
+        # Left edge framing strip
+        f'<rect x="0" y="0" width="25" height="{H}" fill="{HERO_NAVY}"/>',
+        
+        # Dominant Title: VEDANT PATIL
+        f'<g class="title-font" font-size="142" letter-spacing="1.5">',
+        f'  <text x="105" y="235" fill="{HERO_NAVY}" {A("rise", 0.8, 0.4)}>VEDANT</text>',
+        f'  <text x="590" y="235" fill="{HERO_OCEAN}" {A("rise", 0.8, 0.55)}>PATIL</text>',
+        f'</g>',
+        
+        # Subtitle with slim ocean-blue accent line
+        f'<g transform="translate(105, 276)">',
+        f'  <rect x="0" y="6" width="4.5" height="52" fill="{HERO_OCEAN}" rx="2" {A("grow", 0.6, 1.0)}/>',
+        f'  <text class="sans" x="24" y="28" font-size="25" font-weight="600" fill="{HERO_NAVY}" letter-spacing="-0.2" {A("rise", 0.7, 1.15)}>',
+        f'    <tspan x="24" dy="0">Building intelligent systems at the intersection of</tspan>',
+        f'    <tspan x="24" dy="32">hardware, data and algorithms.</tspan>',
+        f'  </text>',
+        f'</g>',
+        
+        # Location: Mumbai, India
+        f'<g transform="translate(105, 388)" {A("rise", 0.6, 1.5)}>',
+        f'  <g transform="translate(0, 2) scale(1.15)">',
+        f'    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="{HERO_OCEAN}"/>',
+        f'  </g>',
+        f'  <text class="sans" x="30" y="20" font-size="22" font-weight="700" fill="{HERO_NAVY}">Mumbai, India</text>',
         f'</g>'
-    )
-    
-    # Main Name typography: Vedant (charcoal) Patil (orange)
-    b.append(
-        f'<g {A("rise", 0.7, 0.2)}>'
-        f'<text x="60" y="152" class="sans" font-size="82" font-weight="800" letter-spacing="-1.5" fill="{DARK_TEXT}">Vedant</text>'
-        f'<text x="60" y="234" class="sans" font-size="82" font-weight="800" letter-spacing="-1.5" fill="{ACCENT_ORANGE}">Patil</text>'
-        f'</g>'
-    )
-    
-    # Vertical divider line
-    b.append(f'<line x1="410" y1="102" x2="410" y2="174" stroke="{BORDER_NEUTRAL}" stroke-width="1.5" {A("fade", 0.6, 0.3)}/>')
-    
-    # Professional identity
-    b.append(
-        f'<g {A("rise", 0.7, 0.3)}>'
-        f'<text x="435" y="128" class="sans" font-size="24" font-weight="700" fill="{DARK_TEXT}">ECS engineer &#160;·</text>'
-        f'<text x="435" y="162" class="sans" font-size="24" font-weight="700" fill="{DARK_TEXT}">systems thinker</text>'
-        f'</g>'
-    )
-    
-    # Outlined pill: ML + quant finance + IoT builder
-    pill_w, pill_h = 320, 36
-    pill_x, pill_y = 350, 204
-    b.append(
-        f'<g {A("fade", 0.6, 0.45)}>'
-        f'<rect x="{pill_x}" y="{pill_y}" width="{pill_w}" height="{pill_h}" rx="18" fill="none" stroke="{BORDER_NEUTRAL}" stroke-width="1.5"/>'
-        f'<circle cx="{pill_x + 22}" cy="{pill_y + 18}" r="4.5" fill="{ACCENT_ORANGE}"/>'
-        f'<text x="{pill_x + 38}" y="{pill_y + 23}" class="sans" font-size="14" font-weight="600" fill="{DARK_TEXT}">ML + quant finance + IoT builder</text>'
-        f'</g>'
-    )
-    
-    return svg(W, H, "".join(b), "Vedant Patil — ECS engineer &amp; systems thinker", defs)
+    ]
+
+    # Right section: Cutout portrait
+    if portrait_b64:
+        b.append(
+            f'<g clip-path="url(#portrait-clip)" {A("heroPortrait", 1.1, 0.75)}>'
+            f'  <image href="data:image/png;base64,{portrait_b64}" x="1070" y="16" width="370" height="656" preserveAspectRatio="xMidYMid meet"/>'
+            f'</g>'
+        )
+
+    return svg(W, H, "".join(b), "Vedant Patil — Hero Banner", defs)
 
 # ---- 2. SOCIAL LINKS BAR ----------------------------------------------------
 def social():
@@ -260,7 +292,6 @@ def social():
     ]
     b = [f'<rect width="{W}" height="{H}" fill="none"/>']
     
-    # Calculate spacing
     center_x = W / 2
     total_w = 780
     start_x = center_x - total_w / 2
@@ -268,7 +299,6 @@ def social():
     
     for i, (name, icon_d, col, link) in enumerate(items):
         cx = start_x + i * pitch + pitch / 2
-        # icon + text
         b.append(
             f'<g class="fb" {A("fade", 0.5, 0.1 + i*0.08)}>'
             f'<g transform="translate({cx - 48}, 16) scale(1.1)">'
@@ -290,10 +320,8 @@ def graph():
         f'<rect width="{W}" height="{H}" rx="20" fill="{BG_CHARCOAL}" stroke="{BORDER_NEUTRAL}" stroke-width="1.5" stroke-opacity="0.25"/>'
     ]
     
-    # Header: Orange icon + Warm Cream Title + Total on Right
     b.append(
         f'<g {A("fade", 0.5, 0.1)}>'
-        # Three orange bars icon
         f'<rect x="42" y="44" width="5" height="18" rx="2.5" fill="{ACCENT_ORANGE}"/>'
         f'<rect x="52" y="38" width="5" height="24" rx="2.5" fill="{ACCENT_ORANGE}"/>'
         f'<rect x="62" y="48" width="5" height="14" rx="2.5" fill="{ACCENT_ORANGE}"/>'
@@ -304,7 +332,7 @@ def graph():
     )
     
     start = END - dt.timedelta(days=370)
-    start -= dt.timedelta(days=(start.weekday() + 1) % 7)  # align to Sunday
+    start -= dt.timedelta(days=(start.weekday() + 1) % 7)
     pitch, x0, y0, cell = 17.2, 42, 102, 13.5
     nz = sorted(c for _, c in YEAR if c > 0)
     qs = [nz[int(len(nz) * p)] for p in (0.25, 0.5, 0.75)] if nz else [1, 2, 3]
@@ -343,7 +371,6 @@ def months():
     best = max(range(12), key=lambda i: data[i][1])
     mx = max(1, max(v for _, v in data))
     
-    # Left Header: Orange icon + Charcoal title + Total
     b.append(
         f'<g {A("fade", 0.5, 0.1)}>'
         f'<rect x="42" y="44" width="5" height="18" rx="2.5" fill="{ACCENT_ORANGE}"/>'
@@ -354,10 +381,8 @@ def months():
         f'</g>'
     )
     
-    # Vertical divider separating Left Chart and Right Stats Grid
     b.append(f'<line x1="605" y1="36" x2="605" y2="284" stroke="{BORDER_NEUTRAL}" stroke-width="1.5" stroke-opacity="0.6"/>')
     
-    # Monthly bars
     base, top = 246, 110
     pitch = 540 / 12
     for i, (m, v) in enumerate(data):
@@ -375,15 +400,10 @@ def months():
                 f'fill="{ACCENT_ORANGE}" {st_text}>{v}</text>'
             )
             
-    # Right Side 2x2 Stats Grid:
-    # Top-Left: Current Streak | Top-Right: Longest Streak
-    # Bottom-Left: Active Days | Bottom-Right: Busiest Day
-    # Divider lines within 2x2 grid
     b.append(f'<line x1="620" y1="160" x2="970" y2="160" stroke="{BORDER_NEUTRAL}" stroke-width="1.2" stroke-opacity="0.5"/>')
     b.append(f'<line x1="795" y1="46" x2="795" y2="274" stroke="{BORDER_NEUTRAL}" stroke-width="1.2" stroke-opacity="0.5"/>')
     
     stats_data = [
-        # (val, unit, label, icon_path, x, y)
         (f"{CUR}", "day" if CUR == 1 else "days", "current streak", 
          "M11 21l-1-7H4l10-14-1 9h6l-8 12z", 630, 80),
         (f"{LONGEST}", "days", "longest streak", 
@@ -420,7 +440,6 @@ def tile(slot, label, number, caption, tags, bg, fg, border_col, is_orange=False
         f'<rect width="{W}" height="{H}" rx="20" fill="{bg}" stroke="{border_col}" stroke-width="1.5"/>'
     ]
     
-    # Decorative subtle corner wave / curve on bottom right
     if is_orange:
         b.append(f'<g clip-path="url(#tile-clip-{slot})"><circle cx="{W + 20}" cy="{H + 20}" r="110" fill="{SOFT_ORANGE}"/></g>')
     elif is_charcoal:
@@ -428,7 +447,6 @@ def tile(slot, label, number, caption, tags, bg, fg, border_col, is_orange=False
     else:
         b.append(f'<g clip-path="url(#tile-clip-{slot})"><circle cx="{W + 20}" cy="{H + 20}" r="90" fill="{SOFT_ORANGE}" fill-opacity="0.3"/></g>')
         
-    # Header: slot . label and top right arrow ↗
     b.append(
         f'<g {A("fade", 0.5, 0.1)}>'
         f'<text x="24" y="38" class="mono" font-size="12" font-weight="700" letter-spacing="1.5" fill="{fg}">'
@@ -438,16 +456,13 @@ def tile(slot, label, number, caption, tags, bg, fg, border_col, is_orange=False
         f'</g>'
     )
     
-    # Big Number
     b.append(countup(24, 132, number, "sans", f'font-size="88" font-weight="800" letter-spacing="-2" fill="{fg}"', 0.2, 0.6))
     
-    # Caption (hackathons won / deep dives right now / internship tracks)
     b.append(
         f'<text x="24" y="168" class="sans" font-size="18" font-weight="700" fill="{fg}" {A("rise", 0.5, 0.3)}>'
         f'{caption}</text>'
     )
     
-    # Pill tags at bottom
     tag_list = [t.strip() for t in tags.split("·")]
     tx = 24
     ty = 194
@@ -475,7 +490,6 @@ def about():
     W, H = 1000, 240
     b = [f'<rect width="{W}" height="{H}" fill="none"/>']
     
-    # Left Column: Bio paragraph with orange vertical accent line
     b.append(f'<line x1="30" y1="20" x2="30" y2="210" stroke="{ACCENT_ORANGE}" stroke-width="3" rx="1.5" {A("grow", 0.6, 0.1)}/>')
     
     bio_lines = [
@@ -498,10 +512,8 @@ def about():
         y_pos += 21
     b.append(f'<text class="sans" font-size="14.5" font-weight="500" fill="{LIGHT_TEXT}" line-height="1.5" {A("fade", 0.6, 0.2)}>{"".join(b_text)}</text>')
     
-    # Vertical Divider between Left and Right columns
     b.append(f'<line x1="510" y1="20" x2="510" y2="210" stroke="{BORDER_NEUTRAL}" stroke-width="1.2" stroke-opacity="0.3"/>')
     
-    # Right Column: 3 Compact Information Rows
     rows = [
         ("M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm0-14c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm0-6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z",
          "Currently focusing on",
@@ -541,10 +553,8 @@ def stack():
         f'<rect width="{W}" height="{H}" rx="20" fill="{CARD_CREAM}"/>'
     ]
     
-    # Header: Layers Icon + Title on left; Category tags on right
     b.append(
         f'<g {A("fade", 0.5, 0.1)}>'
-        # Layers icon
         f'<g transform="translate(42, 40) scale(1.2)">'
         f'<path d="M12 2L1 7l11 5 11-5-11-5zm0 8L3.5 6.5 12 3l8.5 3.5L12 10zm-11 5l11 5 11-5-2-1-9 4-9-4-2 1zm0 4l11 5 11-5-2-1-9 4-9-4-2 1z" fill="{ACCENT_ORANGE}"/>'
         f'</g>'
@@ -552,13 +562,12 @@ def stack():
         f'</g>'
     )
     
-    # Category Labels on the right
     categories = [
         ("LANGUAGES", False),
         ("ML / AI / DATA", False),
         ("DATABASES", False),
         ("WEB &amp; CLOUD", False),
-        ("EMBEDDED", True),  # Underlined active tab matching reference!
+        ("EMBEDDED", True),
         ("TOOLS", False)
     ]
     cat_x = 370
@@ -573,7 +582,6 @@ def stack():
             b.append(f'<text x="{cat_x}" y="56" class="mono" font-size="11.5" font-weight="600" fill="{MUTED_DARK}">{cname}</text>')
         cat_x += w_text + 22
         
-    # 20 Icon Tiles in 1 continuous balanced horizontal row matching reference!
     ordered_techs = [
         "c", "cplusplus", "java", "python", "javascript", "typescript",
         "tensorflow", "pytorch", "scikitlearn", "opencv",
@@ -591,7 +599,6 @@ def stack():
         tx = start_x + i * (tile_w + gap)
         icon_info = icons_dict.get(tech)
         
-        # Tile background: white pill with subtle border
         b.append(
             f'<g class="fb" {A("pop", 0.4, 0.15 + i*0.02)}>'
             f'<rect x="{tx:.1f}" y="{tile_y}" width="{tile_w}" height="{tile_h}" rx="10" fill="#FFFFFF" stroke="{BORDER_NEUTRAL}" stroke-width="1.2"/>'
@@ -600,7 +607,6 @@ def stack():
         if icon_info:
             vb = icon_info["viewBox"]
             content = icon_info["content"]
-            # Render inner SVG scaled to fit tile comfortably (24x24 centered)
             b.append(
                 f'<svg x="{tx + 7.7:.1f}" y="{tile_y + 12}" width="24" height="24" viewBox="{vb}">'
                 f'{content}'
@@ -622,7 +628,6 @@ def footer():
         f'<rect width="{W}" height="{H}" rx="20" fill="{BG_CHARCOAL}" stroke="{BORDER_NEUTRAL}" stroke-width="1.5" stroke-opacity="0.3"/>'
     ]
     
-    # Overlapping geometric circles in the bottom-right corner matching reference
     shapes = f'''
     <g clip-path="url(#footer-clip)">
       <circle cx="950" cy="270" r="160" fill="{ACCENT_ORANGE}"/>
@@ -631,7 +636,6 @@ def footer():
     '''
     b.append(shapes)
     
-    # Main Headline: Let's build something / that actually works.
     b.append(
         f'<g {A("rise", 0.6, 0.15)}>'
         f'<text x="60" y="106" class="sans" font-size="44" font-weight="800" fill="{LIGHT_TEXT}">Let’s build something</text>'
@@ -640,10 +644,8 @@ def footer():
         f'</g>'
     )
     
-    # Vertical divider line
     b.append(f'<line x1="510" y1="94" x2="510" y2="156" stroke="{BORDER_NEUTRAL}" stroke-width="1.5" stroke-opacity="0.4" {A("fade", 0.6, 0.25)}/>')
     
-    # Right side: OPEN TO INTERNSHIPS / ML · QUANT · SYSTEMS · EMBEDDED
     b.append(
         f'<g {A("rise", 0.6, 0.3)}>'
         f'<text x="540" y="112" class="mono" font-size="13" font-weight="700" letter-spacing="2" fill="{LIGHT_TEXT}">OPEN TO INTERNSHIPS</text>'
