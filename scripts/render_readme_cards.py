@@ -47,6 +47,14 @@ HERO_PALE_BLUE = "#EAF6FE"
 HERO_WHITE     = "#FFFFFF"
 
 # Heatmap orange levels: empty + 4 intensities
+GRAPH_HEAT_LEVELS = [
+    "#143750",  # inactive cell
+    "#1B5078",  # level 1
+    "#196BA8",  # level 2
+    "#0B73CE",  # level 3
+    "#0875D1",  # level 4 (Ocean blue)
+]
+
 HEAT_LEVELS = [
     GRID_EMPTY,
     "#7A4526",  # level 1
@@ -317,7 +325,7 @@ def social():
 def graph():
     W, H = 1000, 240
     b = [
-        f'<rect width="{W}" height="{H}" rx="20" fill="{BG_CHARCOAL}" stroke="{BORDER_NEUTRAL}" stroke-width="1.5" stroke-opacity="0.25"/>'
+        f'<rect width="{W}" height="{H}" rx="20" fill="{HERO_NAVY}" stroke="{HERO_OCEAN}" stroke-width="1.5" stroke-opacity="0.35"/>'
     ]
     
     b.append(
@@ -351,9 +359,9 @@ def graph():
         lv = min(level(c), 4)
         x, y = x0 + wk * pitch, y0 + row * pitch
         st = f'style="animation:pop .4s cubic-bezier(.16,1,.3,1) {0.15 + wk * 0.015:.3f}s both;transform-origin:center"' if not STATIC else ""
-        cells.append(f'<rect class="fb" x="{x:.1f}" y="{y:.1f}" width="{cell}" height="{cell}" rx="3.5" fill="{HEAT_LEVELS[lv]}" {st}/>')
+        cells.append(f'<rect class="fb" x="{x:.1f}" y="{y:.1f}" width="{cell}" height="{cell}" rx="3.5" fill="{GRAPH_HEAT_LEVELS[lv]}" {st}/>')
         if row == 0 and d.month != last_m and wk < 52:
-            labels.append(f'<text x="{x:.1f}" y="92" class="mono" font-size="11" font-weight="500" fill="{MUTED_LIGHT}">{calendar.month_abbr[d.month]}</text>')
+            labels.append(f'<text x="{x:.1f}" y="92" class="mono" font-size="11" font-weight="500" fill="#8AA8BF">{calendar.month_abbr[d.month]}</text>')
             last_m = d.month
         d += dt.timedelta(days=1)
         
